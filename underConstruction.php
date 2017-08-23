@@ -7,6 +7,7 @@
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
 		<!-- jQuery, Tether, Popper, Boostrap JS -->
 		<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
@@ -18,7 +19,9 @@
 		<script type="text/javascript">
 			//Onload function
 			$(document).ready(function() {
-				//$("#logofade").addClass("load");
+				$("#logofade").delay(500).animate({ opacity: 1 }, 1000);
+				$("#title").delay(1000).animate({ opacity: 1 }, 1000);
+				$("#instaline").delay(1000).animate({ opacity: 1 }, 1000);
 			});
 
 		</script>
@@ -26,20 +29,18 @@
 		<!-- CSS -->
 		<style type="text/css">
 			#logofade {
+				opacity: 0;
 				width: 400px;
 				margin-top: 200px;
-				-webkit-transition: all 2s;
-				transition: all 2s;
-			}
-
-			.load {
 			}
 		</style>
-
 	</head>
 	<body>
 		<div style="text-align: center; ">
-			<img src="images/logo-color-full.jpg" id="logofade">
+			<img src="images/logo-bw-full.png" id="logofade">
+			<br>
+			<h2 id="title" style="opacity: 0;"><font face="lucida console">Coming soon!</font></h2>
+			<h2 id="instaline" style="opacity: 0;"><font face="lucida console">until then, check me out on my insta -> </font><a  href="https://www.instagram.com/2jmovingpictures/?hl=en" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a></h2>
 		</div>
 
 	</body>
