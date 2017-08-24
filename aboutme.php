@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Home</title>
+		<title>About me</title>
 		<link rel="icon" href="images/logo-color-mini.png">
 		<!-- Meta tags -->
 		<meta charset="utf-8">
@@ -22,17 +22,7 @@
 		<script type="text/javascript">
 			//Onload function
 			$(document).ready(function() {
-				$('#welcomeTitle1')
-					.delay(1000)
-					.animate({ opacity: 1 }, 1000)
-					.delay(2000)
-					.animate({ left: "-=1000px", }, 'slow');
-				$('#welcomeTitle2')
-					.delay(2000)
-					.animate({ opacity: 1 }, 1000)
-					.delay(1000)
-					.animate({ left: "+=1200px", }, 'slow');
-					
+
 			});
 
 		</script>
@@ -76,11 +66,6 @@
 			#navbarMenu li .active {
 			    background-color: #4CAF50;
 			}
-
-			.welcomeTitle {
-				opacity: 0;
-				position: relative;
-			}
 		</style>
 	</head>
 	<body>
@@ -88,7 +73,7 @@
 		<div id="navbar" class="w3-container" style="padding: 0px 0px;">
 			<ul id="navbarMenu" class="w3-center w3-animate-top">
 			  <li>
-			  	<a class="active" href="#home" >Home</a>
+			  	<a href="index.php" >Home</a>
 			  </li>
 			  <li>
 			  	<a href="gallery.php">Gallery</a>
@@ -97,7 +82,7 @@
 			  	<a href="blog.php">Blog</a>
 			  </li>
 			  <li>
-			  	<a href="aboutme.php">About Me</a>
+			  	<a class="active" href="#aboutme">About Me</a>
 			  </li>
 			  <li style="float: right;">
 			  	<a href="letstalk.php">Let's Talk</a>
@@ -105,10 +90,9 @@
 			</ul>
 		</div>
 		<div class="container-fluid">
-			<div style="text-align: center; margin-top: 350px;">
-				<h1 class="welcomeTitle" id="welcomeTitle1">Hello!</h1>
-				<h1 class="welcomeTitle" id="welcomeTitle2">I'm glad you could make it.</h1>
-			</div>
+			<h1 style="margin-top: 100px;"><u>
+				About me
+			</u></h1>
 		</div>
 	</body>
 </html>
