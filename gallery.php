@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/w3.css">
+		<link rel="stylesheet" href="css/animations.css">
 
 		<!-- jQuery, Tether, Popper, Boostrap JS -->
 		<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
@@ -22,56 +23,45 @@
 		<script type="text/javascript">
 			//Onload function
 			$(document).ready(function() {
+				});
 
-			});
+			function walkAnimate() {
+				var rng = Math.floor(((Math.random() * 10) + 1)/2);
+				if(rng == 1) {
+					$('.person', this)
+						.delay(1000)
+						.animate({ left: "+=10px", top: "+=10px" }, '50');
+				}else if(rng == 2) {
+					$(this)
+						.delay(1000)
+						.animate({ left: "+=10px", top: "-=10px" }, '50');
+				}else if(rng == 3) {
+					$(this)
+						.delay(1000)
+						.animate({ left: "-=10px", top: "+=10px" }, '50');
+				}else if(rng == 4) {
+					$(this)
+						.delay(1000)
+						.animate({ left: "-=10px", top: "-=10px" }, '50');
+				}else if(rng == 5) {
+				}
+				walkAnimate();
+			}
 
 		</script>
 
 		<!-- CSS -->
+		<link rel="stylesheet" href="css/navbar.css">
 		<style type="text/css">
-			body {
-				margin: 0px;
-				padding: 0px;
-			}
-
-			#navbarMenu {
-			    list-style-type: none;
-			    margin: 0px;
-			    padding: 0px;
-			    overflow: hidden;
-			    background-color: #333;
-			    position: fixed;
-			    top: 0;
-			    width: 100%;
-			}
-
-			#navbarMenu li {
-			    float: left;
-			    margin: 0px 10px;
-			}
-
-			#navbarMenu li a {
-			    display: block;
-			    color: white;
-			    text-align: center;
-			    padding: 14px 16px;
-			    text-decoration: none;
-			    font-family: "Lucida Console";
-			}
-
-			#navbarMenu li a:hover:not(.active) {
-			    background-color: #111;
-			}
-
-			#navbarMenu li .active {
-			    background-color: #4CAF50;
+			.person {
+				 animation-duration: .7s;
 			}
 		</style>
 	</head>
 	<body>
 		<!-- Navbar -->
-		<div id="navbar" class="w3-container" style="padding: 0px 0px;">
-			<ul id="navbarMenu" class="w3-center w3-animate-top">
+		<div id="navbar" style="padding: 0px 0px;">
+			<ul id="navbarMenu">
 			  <li>
 			  	<a href="index.php" >Home</a>
 			  </li>
@@ -93,7 +83,10 @@
 			<h1>
 				Welcome to the Gallery!
 			</h1>
-			<img src="images/commentor.png" style="height: 50px;">
+			<img class="tossing person" onload="" src="images/commentor.png" style="height: 50px; position: relative;">
+			<img class="tossing person" src="images/commentor.png" style="height: 50px; position: relative;">
+			<img class="tossing person" src="images/commentor.png" style="height: 50px; position: relative;">
+			<img class="tossing person" src="images/commentor.png" style="height: 50px; position: relative;">
 		</div>
 	</body>
 </html>

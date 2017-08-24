@@ -28,50 +28,15 @@
 		</script>
 
 		<!-- CSS -->
+		<link rel="stylesheet" href="css/navbar.css">
 		<style type="text/css">
-			body {
-				margin: 0px;
-				padding: 0px;
-			}
 
-			#navbarMenu {
-			    list-style-type: none;
-			    margin: 0px;
-			    padding: 0px;
-			    overflow: hidden;
-			    background-color: #333;
-			    position: fixed;
-			    top: 0;
-			    width: 100%;
-			}
-
-			#navbarMenu li {
-			    float: left;
-			    margin: 0px 10px;
-			}
-
-			#navbarMenu li a {
-			    display: block;
-			    color: white;
-			    text-align: center;
-			    padding: 14px 16px;
-			    text-decoration: none;
-			    font-family: "Lucida Console";
-			}
-
-			#navbarMenu li a:hover:not(.active) {
-			    background-color: #111;
-			}
-
-			#navbarMenu li .active {
-			    background-color: #4CAF50;
-			}
 		</style>
 	</head>
 	<body>
 		<!-- Navbar -->
-		<div id="navbar" class="w3-container" style="padding: 0px 0px;">
-			<ul id="navbarMenu" class="w3-center w3-animate-top">
+		<div id="navbar" style="padding: 0px 0px;">
+			<ul id="navbarMenu">
 			  <li>
 			  	<a href="index.php" >Home</a>
 			  </li>

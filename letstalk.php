@@ -28,50 +28,30 @@
 		</script>
 
 		<!-- CSS -->
+		<link rel="stylesheet" href="css/navbar.css">
 		<style type="text/css">
-			body {
-				margin: 0px;
-				padding: 0px;
-			}
-
-			#navbarMenu {
-			    list-style-type: none;
-			    margin: 0px;
-			    padding: 0px;
-			    overflow: hidden;
-			    background-color: #333;
-			    position: fixed;
-			    top: 0;
+			input[type=text] {
 			    width: 100%;
+			    padding: 12px 20px;
+			    margin: 8px 0;
+			    box-sizing: border-box;
+			    border: 3px solid #ccc;
+    			border-radius: 4px;
+			    -webkit-transition: 0.5s;
+			    transition: 0.5s;
+			    outline: none;
 			}
 
-			#navbarMenu li {
-			    float: left;
-			    margin: 0px 10px;
+			input[type=text]:focus {
+			    border: 3px solid #2255a5;
 			}
 
-			#navbarMenu li a {
-			    display: block;
-			    color: white;
-			    text-align: center;
-			    padding: 14px 16px;
-			    text-decoration: none;
-			    font-family: "Lucida Console";
-			}
-
-			#navbarMenu li a:hover:not(.active) {
-			    background-color: #111;
-			}
-
-			#navbarMenu li .active {
-			    background-color: #4CAF50;
-			}
 		</style>
 	</head>
 	<body>
 		<!-- Navbar -->
-		<div id="navbar" class="w3-container" style="padding: 0px 0px;">
-			<ul id="navbarMenu" class="w3-center w3-animate-top">
+		<div id="navbar" style="padding: 0px 0px;">
+			<ul id="navbarMenu">
 			  <li>
 			  	<a href="index.php" >Home</a>
 			  </li>
@@ -93,6 +73,12 @@
 			<h1  style="margin-top: 100px;"><font face="lucida console">
 				Let's talk
 			<font></h1>
+			<form>
+	  			<label for="fname" style="margin-bottom: 0px;">Name</label>
+				<input type="text" id="fname" name="fname" placeholder="" style="margin-top: 0px;">
+	  			<label for="fname" style="margin-bottom: 0px;">Email</label>
+				<input type="text" id="lname" name="lname" placeholder="" style="margin-top: 0px;">
+			</form>
 		</div>
 	</body>
 </html>
