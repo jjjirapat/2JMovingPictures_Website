@@ -23,8 +23,14 @@
 				$('#welcomeTitle1')
 					.delay(1000)
 					.animate({ opacity: 1 }, 1000)
-				$('#welcomeTitle2').delay(2000).animate({ opacity: 1 }, 1000);
-				$('#welcomeTitle2').delay(3000).animate({ left: "-=1000px", }, 'slow');
+					.delay(2000)
+					.animate({ left: "-=1000px", }, 'slow');
+				$('#welcomeTitle2')
+					.delay(2000)
+					.animate({ opacity: 1 }, 1000)
+					.delay(2000)
+					.animate({ left: "+=1200px", }, 'slow');
+					
 			});
 
 		</script>
@@ -49,6 +55,7 @@
 
 			#navbarMenu li {
 			    float: left;
+			    margin: 0px 10px;
 			}
 
 			#navbarMenu li a {
@@ -66,6 +73,11 @@
 			#navbarMenu li .active {
 			    background-color: #4CAF50;
 			}
+
+			.welcomeTitle {
+				opacity: 0;
+				position: relative;
+			}
 		</style>
 	</head>
 	<body>
@@ -76,20 +88,23 @@
 			  	<a class="active" href="#home" >Home</a>
 			  </li>
 			  <li>
-			  	<a href="#news">News</a>
+			  	<a href="#news">Gallery</a>
 			  </li>
 			  <li>
-			  	<a href="#contact">Contact</a>
+			  	<a href="#contact">Blog</a>
 			  </li>
 			  <li>
-			  	<a href="#about">About</a>
+			  	<a href="#contact">About Me</a>
+			  </li>
+			  <li style="float: right;">
+			  	<a href="#about">Let's Talk</a>
 			  </li>
 			</ul>
 		</div>
 		<div class="container-fluid">
 			<div style="text-align: center; margin-top: 350px;">
-				<h1 id="welcomeTitle1" style="opacity: 0; position: relative;">Hello!</h1>
-				<h1 id="welcomeTitle2" style="opacity: 0;">I'm glad you could make it.</h1>
+				<h1 class="welcomeTitle" id="welcomeTitle1">Hello!</h1>
+				<h1 class="welcomeTitle" id="welcomeTitle2">I'm glad you could make it.</h1>
 			</div>
 		</div>
 	</body>
