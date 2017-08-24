@@ -7,30 +7,90 @@
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
-		<!-- Other Scripts -->
-	</head>
-	<body>
-		<nav class="navbar navbar-default">	
-			<div class="container-fluid">
-				<div class="navbar-header">
-				<a class="navbar-brand">Navbar</a>
-			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
-			    <a class="navbar-brand" href="#">Brand</a>
-			    </div>
-			</div>
-		</nav>
-
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/w3.css">
 
 		<!-- jQuery, Tether, Popper, Boostrap JS -->
 		<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+		<!-- Other Scripts -->
+		<script type="text/javascript">
+			//Onload function
+			$(document).ready(function() {
+				$('#welcomeTitle1')
+					.delay(1000)
+					.animate({ opacity: 1 }, 1000)
+				$('#welcomeTitle2').delay(2000).animate({ opacity: 1 }, 1000);
+				$('#welcomeTitle2').delay(3000).animate({ left: "-=1000px", }, 'slow');
+			});
+
+		</script>
+
+		<!-- CSS -->
+		<style type="text/css">
+			body {
+				margin: 0px;
+				padding: 0px;
+			}
+
+			#navbarMenu {
+			    list-style-type: none;
+			    margin: 0px;
+			    padding: 0px;
+			    overflow: hidden;
+			    background-color: #333;
+			    position: fixed;
+			    top: 0;
+			    width: 100%;
+			}
+
+			#navbarMenu li {
+			    float: left;
+			}
+
+			#navbarMenu li a {
+			    display: block;
+			    color: white;
+			    text-align: center;
+			    padding: 14px 16px;
+			    text-decoration: none;
+			}
+
+			#navbarMenu li a:hover:not(.active) {
+			    background-color: #111;
+			}
+
+			#navbarMenu li .active {
+			    background-color: #4CAF50;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<div id="navbar" class="w3-container" style="padding: 0px 0px;">
+			<ul id="navbarMenu" class="w3-center w3-animate-top">
+			  <li>
+			  	<a class="active" href="#home" >Home</a>
+			  </li>
+			  <li>
+			  	<a href="#news">News</a>
+			  </li>
+			  <li>
+			  	<a href="#contact">Contact</a>
+			  </li>
+			  <li>
+			  	<a href="#about">About</a>
+			  </li>
+			</ul>
+		</div>
+		<div class="container-fluid">
+			<div style="text-align: center; margin-top: 350px;">
+				<h1 id="welcomeTitle1" style="opacity: 0; position: relative;">Hello!</h1>
+				<h1 id="welcomeTitle2" style="opacity: 0;">I'm glad you could make it.</h1>
+			</div>
+		</div>
 	</body>
 </html>
