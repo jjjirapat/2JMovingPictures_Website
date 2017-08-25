@@ -23,33 +23,39 @@
 		<script type="text/javascript">
 			//Onload function
 			$(document).ready(function() {
-				});
-
-			function walkAnimate() {
-				var x = Math.floor((Math.random() * 10) + 1);
-				var id = Math.floor(((Math.random() * 10) + 1)/2);
-				var rng = Math.floor((Math.random() * 100) + x);
-				if(0 < rng >= 20) {
-					$('#person'+id)
-						.delay(1000)
-						.animate({ left: "+=10px", top: "+=10px" }, '50');
-				}else if(20 < rng >= 40) {
-					$('#person'+id)
-						.delay(1000)
-						.animate({ left: "+=10px", top: "-=10px" }, '50');
-				}else if(40 < rng >= 80) {
-					$('#person'+id)
-						.delay(1000)
-						.animate({ left: "-=10px", top: "+=10px" }, '50');
-				}else if(80 < rng >= 100) {
-					$('#person'+id)
-						.delay(1000)
-						.animate({ left: "-=10px", top: "-=10px" }, '50');
-				}else if(rng == 5) {
+				for(var i = 0; i < 10; i++) {
+					walkAnimate2();
 				}
-				walkAnimate();
+			});
+
+			function walkAnimate2() {
+				//var x = Math.floor((Math.random() * 10) + 1);
+				//var id = Math.floor(((Math.random() * 10) + 1)/2);
+				$('.person').each(function() {
+					var rng = Math.floor(((Math.random() * 10) + 1)/2);
+					if(rng == 1) {
+						$(this)
+							.animate({ left: "+=10px", top: "+=10px", height: "-=10" }, '50');
+					}else if(rng == 2) {
+						$(this)
+							.animate({ left: "+=10px", top: "-=10px", height: "-=10" }, '50');
+					}else if(rng == 3) {
+						$(this)
+							.animate({ left: "-=10px", top: "+=10px", height: "+=10" }, '50');
+					}else if(rng == 4) {
+						$(this)
+							.animate({ left: "-=10px", top: "-=10px", height: "+=10" }, '50');
+					}else if(rng == 5) {
+						$(this)
+							.animate({ left: "-=1000px", top: "-=1000px", height: "+=10" }, '50');
+					}
+				});
 			}
 
+			$('#person5').hover(function() {
+				$("#person5")
+					.animate({ left: "+=1000px", top: "+=10px" }, '50');
+			});
 		</script>
 
 		<!-- CSS -->
@@ -85,11 +91,11 @@
 			<h1>
 				Welcome to the Gallery!
 			</h1>
-			<img id="person1" class="tossing" src="images/commentor.png" style="height: 50px; position: relative;">
-			<img id="person2" class="tossing" src="images/commentor.png" style="height: 50px; position: relative;">
-			<img id="person3" class="tossing" src="images/commentor.png" style="height: 50px; position: relative;">
-			<img id="person4" class="tossing" src="images/commentor.png" style="height: 50px; position: relative;">
-			<img id="person5" class="tossing" src="images/commentor.png" style="height: 50px; position: relative;">
+			<img id="person1" class="tossing person" src="images/commentor.png" style="height: 50px; position: relative;">
+			<img id="person2" class="tossing person" src="images/commentor.png" style="height: 50px; position: relative;">
+			<img id="person3" class="tossing person" src="images/commentor.png" style="height: 50px; position: relative;">
+			<img id="person4" class="tossing person" src="images/commentor.png" style="height: 50px; position: relative;">
+			<img id="person5" class="tossing person" src="images/commentor.png" style="height: 50px; position: relative;">
 		</div>
 	</body>
 </html>
