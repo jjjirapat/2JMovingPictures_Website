@@ -22,26 +22,28 @@
 		<script type="text/javascript">
 			//Onload function
 			$(document).ready(function() {
+				animateWelcome();
+			});
+
+			function animateWelcome() {
 				$('#welcomeTitle1')
 					.delay(1000)
 					.animate({ opacity: 1 }, 1000)
 					.delay(2000)
 					.animate({ left: "-=1000px", }, 'slow')
 					.delay(1000)
-					.animate({ left: "+=1000px" }, 'slow');
+					.animate({ left: "+=800px" }, 'slow');
+
 				$('#welcomeTitle2')
 					.delay(2000)
 					.animate({ opacity: 1 }, 1000)
 					.delay(1000)
 					.animate({ left: "+=1200px", }, 'slow');
-					
-			});
+				
 
-			function changeWelcome() {
-				clearTimeout(timeout);
-				var timeout = setTimeout(function() {
-					$('#welcomeTitle1').html('testing one two test');
-				}, 2000);
+				setTimeout(function() {
+					$('#welcomeTitle1').html('This is me ->');
+				}, 5000);
 			}
 
 		</script>
