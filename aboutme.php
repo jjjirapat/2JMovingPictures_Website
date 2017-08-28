@@ -47,7 +47,7 @@
 			  	<a href="blog.php">Blog</a>
 			  </li>
 			  <li>
-			  	<a class="active" href="#aboutme">About Me</a>
+			  	<a class="active" href="#">About Me</a>
 			  </li>
 			  <li style="float: right;">
 			  	<a href="letstalk.php">Let's Talk</a>

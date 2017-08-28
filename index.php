@@ -26,7 +26,9 @@
 					.delay(1000)
 					.animate({ opacity: 1 }, 1000)
 					.delay(2000)
-					.animate({ left: "-=1000px", }, 'slow');
+					.animate({ left: "-=1000px", }, 'slow')
+					.delay(1000)
+					.animate({ left: "+=1000px" }, 'slow');
 				$('#welcomeTitle2')
 					.delay(2000)
 					.animate({ opacity: 1 }, 1000)
@@ -34,6 +36,13 @@
 					.animate({ left: "+=1200px", }, 'slow');
 					
 			});
+
+			function changeWelcome() {
+				clearTimeout(timeout);
+				var timeout = setTimeout(function() {
+					$('#welcomeTitle1').html('testing one two test');
+				}, 2000);
+			}
 
 		</script>
 
@@ -52,7 +61,7 @@
 		<div id="navbar" class="w3-container" style="padding: 0px 0px;">
 			<ul id="navbarMenu" class="w3-center w3-animate-top">
 			  <li>
-			  	<a class="active" href="#home" >Home</a>
+			  	<a class="active" href="#" >Home</a>
 			  </li>
 			  <li>
 			  	<a href="gallery.php">Gallery</a>
@@ -72,6 +81,12 @@
 			<div style="text-align: center; margin-top: 350px;">
 				<h1 class="welcomeTitle" id="welcomeTitle1">Hello!</h1>
 				<h1 class="welcomeTitle" id="welcomeTitle2">I'm glad you could make it.</h1>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div style="text-align: center; margin-top: 350px; position: absolute;">
+				<h1>This is a test!</h1>
+				<h1>This is also a test!</h1>
 			</div>
 		</div>
 	</body>

@@ -44,7 +44,7 @@
 			  	<a href="gallery.php">Gallery</a>
 			  </li>
 			  <li>
-			  	<a class="active" href="#blog">Blog</a>
+			  	<a class="active" href="#">Blog</a>
 			  </li>
 			  <li>
 			  	<a href="aboutme.php">About Me</a>

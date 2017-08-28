@@ -74,7 +74,7 @@
 			  	<a href="index.php" >Home</a>
 			  </li>
 			  <li>
-			  	<a class="active" href="#gallery">Gallery</a>
+			  	<a class="active" href="#">Gallery</a>
 			  </li>
 			  <li>
 			  	<a href="blog.php">Blog</a>

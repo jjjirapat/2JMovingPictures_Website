@@ -65,7 +65,7 @@
 			  	<a href="aboutme.php">About Me</a>
 			  </li>
 			  <li style="float: right;">
-			  	<a class="active" href="#letstalk">Let's Talk<font></a>
+			  	<a class="active" href="#">Let's Talk<font></a>
 			  </li>
 			</ul>
 		</div>
