@@ -78,23 +78,20 @@
 			}
 
 			#carouselIndex {
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				z-index: -1;
 			}
 
 			.carousel-inner img {
 			    opacity: 0.65;
 			}
 
+			.carousel,.item,.active{height:100%;}
+			.carousel-inner{height:100%;}
+
 		</style>
 	</head>
 	<body>
 		<!-- Navbar -->
-		<div id="navbar" class="w3-container" style="padding: 0px 0px;">
+		<div id="navbar" class="w3-container" style="position: relative; padding: 0px 0px; z-index: 10;">
 			<ul id="navbarMenu" class="w3-center w3-animate-top">
 			  <li>
 			  	<a class="active" href="#" >Home</a>
@@ -117,7 +114,7 @@
 		<!-- Background image -->
 
 		<!-- Welcome animation -->
-		<div id="welcomeContainer" class="container-fluid" style="">
+		<div id="welcomeContainer" class="container-fluid" style="position: absolute;">
 			<div id="welcomeText" style="text-align: center; margin-top: -500px;">
 				<h1 class="welcomeTitle" id="welcomeTitle1">Hello!</h1>
 				<h1 class="welcomeTitle" id="welcomeTitle2">I'm glad you could make it.</h1>
@@ -149,6 +146,10 @@
 		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 		    <span class="sr-only">Next</span>
 		  </a>
+		</div>
+
+		<div>
+			<h1>Hello!</h1>
 		</div>
 
 	</body>
