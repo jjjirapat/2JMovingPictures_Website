@@ -30,20 +30,25 @@
 					.delay(1000)
 					.animate({ opacity: 1 }, 1000)
 					.delay(2000)
-					.animate({ left: "-=1000px", }, 'slow')
+					.animate({ left: "-=1000px" }, 'slow')
 					.delay(1000)
-					.animate({ left: "+=800px" }, 'slow');
+					.animate({ left: "+=900px", top: "-=200px" }, 'slow')
+					.delay(2000)
+					.animate({ top: "-=500px"}, 'slow' );
 
 				$('#welcomeTitle2')
 					.delay(2000)
 					.animate({ opacity: 1 }, 1000)
 					.delay(1000)
-					.animate({ left: "+=1200px", }, 'slow');
-				
+					.animate({ left: "+=1200px" }, 'slow');
 
+				$('.jjImage')
+					.delay(5000)
+					.animate({ opacity: 0.65 }, 3000);
+				
 				setTimeout(function() {
-					$('#welcomeTitle1').html('This is me ->');
-				}, 5000);
+					$('#welcomeTitle1').html('<-- This is me');}, 5000);
+
 			}
 
 		</script>
@@ -51,11 +56,40 @@
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/navbar.css">
 		<style type="text/css">
+			body, html {
+				height: 100%;
+				margin: 0;
+			}
 
 			.welcomeTitle {
 				opacity: 0;
 				position: relative;
 			}
+
+			.jjImage {
+				background-image: url("images/gallery-photos/Carousel_1.png");
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				height: 100%;
+				opacity: 0;
+				position: relative;
+				z-index: -1;
+			}
+
+			#carouselIndex {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+			}
+
+			.carousel-inner img {
+			    opacity: 0.65;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -79,17 +113,43 @@
 			  </li>
 			</ul>
 		</div>
-		<div class="container-fluid">
-			<div style="text-align: center; margin-top: 350px;">
+
+		<!-- Background image -->
+
+		<!-- Welcome animation -->
+		<div id="welcomeContainer" class="container-fluid" style="">
+			<div id="welcomeText" style="text-align: center; margin-top: -500px;">
 				<h1 class="welcomeTitle" id="welcomeTitle1">Hello!</h1>
 				<h1 class="welcomeTitle" id="welcomeTitle2">I'm glad you could make it.</h1>
 			</div>
 		</div>
-		<div class="container-fluid">
-			<div style="text-align: center; margin-top: 350px; position: absolute;">
-				<h1>This is a test!</h1>
-				<h1>This is also a test!</h1>
-			</div>
+
+		<div id="carouselIndex" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		  </ol>
+		  <div class="carousel-inner" role="listbox">
+		    <div class="carousel-item active">
+		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_1.png" alt="First slide">
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_2.jpg" alt="Second slide">
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_3.jpg" alt="Third slide">
+		    </div>
+		  </div>
+		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
 		</div>
+
 	</body>
 </html>
