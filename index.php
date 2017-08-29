@@ -90,7 +90,19 @@
 			}
 
 			.carousel-caption {
-				opacity: 1;
+				opacity: 0.75;
+				text-shadow:
+					-1px -1px 0 #000,  
+					1px -1px 0 #000,
+					-1px 1px 0 #000,
+					1px 1px 0 #000;
+					-webkit-backface-visibility: hidden;
+					z-index: 10;
+			}
+
+			.carousel-caption a:hover {
+
+    			text-decoration: none;
 			}
 
 		</style>
@@ -136,7 +148,7 @@
 		  <div class="carousel-inner" role="listbox">
 		    <div class="carousel-item active">
 		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_1.jpg" alt="First slide">
-  				<div class="carousel-caption d-none d-md-block" style="margin-top: 50px;">
+  				<div class="carousel-caption d-none d-md-block">
   					<h2 style="">Learn more <a href="aboutme.php"><strong>about me</strong></a> or visit my <a href="blog.php"><strong>blog</strong></a></h2>
   				</div>
 		    </div>
@@ -149,7 +161,7 @@
 		    <div class="carousel-item">
 		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_3.jpg" alt="Third slide">
 		     	<div class="carousel-caption d-none d-md-block">
-  					<h2 style="">Business inquiry? <a href="letstalk.php"><strong>Let's talk.</strong></a></h2>
+  					<h2 style="">Got a question? <a href="letstalk.php"><strong>Let's talk.</strong></a></h2>
   				</div>
 		    </div>
 		  </div>
