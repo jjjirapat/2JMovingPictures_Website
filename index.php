@@ -28,13 +28,9 @@
 			function animateWelcome() {
 				$('#welcomeTitle1')
 					.delay(1000)
-					.animate({ opacity: 1 }, 1000)
+					.animate({ opacity: 1 }, 1000) 
 					.delay(2000)
-					.animate({ left: "-=1000px" }, 'slow')
-					.delay(1000)
-					.animate({ left: "+=900px", top: "-=200px" }, 'slow')
-					.delay(2000)
-					.animate({ top: "-=500px"}, 'slow' );
+					.animate({ left: "-=1100px" }, 'slow');
 
 				$('#welcomeTitle2')
 					.delay(2000)
@@ -42,12 +38,20 @@
 					.delay(1000)
 					.animate({ left: "+=1200px" }, 'slow');
 
-				$('.jjImage')
-					.delay(5000)
-					.animate({ opacity: 0.65 }, 3000);
+				$('#carouselIndex')
+					.delay(3500)
+					.animate({ opacity: 1 }, 3000);
 				
-				setTimeout(function() {
-					$('#welcomeTitle1').html('<-- This is me');}, 5000);
+				//setTimeout(function() {
+				//	$('#welcomeTitle1').html('<-- This is me');}, 5000);
+
+				$('.carousel-control-prev').click(function() {
+				 	$('#carouselIndex').carousel('prev');
+				});
+
+				$('.carousel-control-next').click(function() {
+				 	$('#carouselIndex').carousel('next');
+				});
 
 			}
 
@@ -62,19 +66,8 @@
 			}
 
 			.welcomeTitle {
-				opacity: 0;
 				position: relative;
-			}
-
-			.jjImage {
-				background-image: url("images/gallery-photos/Carousel_1.png");
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-				height: 100%;
 				opacity: 0;
-				position: relative;
-				z-index: -1;
 			}
 
 			#carouselIndex {
@@ -82,17 +75,23 @@
 
 			.carousel-inner img {
 			    opacity: 0.65;
+			    margin-top: -100px;
 			}
 
-			.carousel,.item,.active{height:100%;}
-			.carousel-inner{height:100%;}
+			.carousel,.item,.active {
+				height:100%;
+			}
+
+			.carousel-inner {
+				height:100%;
+			}
 
 		</style>
 	</head>
 	<body>
 		<!-- Navbar -->
-		<div id="navbar" class="w3-container" style="position: relative; padding: 0px 0px; z-index: 10;">
-			<ul id="navbarMenu" class="w3-center w3-animate-top">
+		<div id="navbar" style="position: relative; padding: 0px 0px; z-index: 10;">
+			<ul id="navbarMenu">
 			  <li>
 			  	<a class="active" href="#" >Home</a>
 			  </li>
@@ -111,25 +110,25 @@
 			</ul>
 		</div>
 
-		<!-- Background image -->
-
 		<!-- Welcome animation -->
-		<div id="welcomeContainer" class="container-fluid" style="position: absolute;">
-			<div id="welcomeText" style="text-align: center; margin-top: -500px;">
+		<div id="welcomeContainer" class="container-fluid" style="">
+			<div id="welcomeText" style="text-align: center; position: absolute; 
+				z-index: 2; left: 40%; top: 30%;">
 				<h1 class="welcomeTitle" id="welcomeTitle1">Hello!</h1>
 				<h1 class="welcomeTitle" id="welcomeTitle2">I'm glad you could make it.</h1>
 			</div>
 		</div>
 
-		<div id="carouselIndex" class="carousel slide" data-ride="carousel">
+		<!-- Image Carousel -->
+		<div id="carouselIndex" class="carousel slide" data-interval="5000" data-ride="carousel" style="opacity: 0;">
 		  <ol class="carousel-indicators">
-		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-		    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-		    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+		    <li data-target="#carouselIndicators" data-slide-to="1"></li>
+		    <li data-target="#carouselIndicators" data-slide-to="2"></li>
 		  </ol>
 		  <div class="carousel-inner" role="listbox">
 		    <div class="carousel-item active">
-		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_1.png" alt="First slide">
+		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_1.jpg" alt="First slide">
 		    </div>
 		    <div class="carousel-item">
 		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_2.jpg" alt="Second slide">
@@ -138,19 +137,14 @@
 		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_3.jpg" alt="Third slide">
 		    </div>
 		  </div>
-		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		  <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
 		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 		    <span class="sr-only">Previous</span>
 		  </a>
-		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		  <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next" style="color: #707070;">
 		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 		    <span class="sr-only">Next</span>
 		  </a>
 		</div>
-
-		<div>
-			<h1>Hello!</h1>
-		</div>
-
 	</body>
 </html>
