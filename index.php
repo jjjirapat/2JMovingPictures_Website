@@ -23,6 +23,7 @@
 			//Onload function
 			$(document).ready(function() {
 				animateWelcome();
+				animateCarousel();
 			});
 
 			function animateWelcome() {
@@ -37,13 +38,12 @@
 					.animate({ opacity: 1 }, 1000)
 					.delay(1000)
 					.animate({ left: "+=1200px" }, 'slow');
+			}
 
+			function animateCarousel() {
 				$('#carouselIndex')
 					.delay(3500)
 					.animate({ opacity: 1 }, 3000);
-				
-				//setTimeout(function() {
-				//	$('#welcomeTitle1').html('<-- This is me');}, 5000);
 
 				$('.carousel-control-prev').click(function() {
 				 	$('#carouselIndex').carousel('prev');
@@ -53,6 +53,9 @@
 				 	$('#carouselIndex').carousel('next');
 				});
 
+				$('.carousel').carousel({
+				    pause: "false"
+				});
 			}
 
 		</script>
@@ -74,7 +77,7 @@
 			}
 
 			.carousel-inner img {
-			    opacity: 0.65;
+			    opacity: 0.7;
 			    margin-top: -100px;
 			}
 
@@ -84,6 +87,10 @@
 
 			.carousel-inner {
 				height:100%;
+			}
+
+			.carousel-caption {
+				opacity: 1;
 			}
 
 		</style>
@@ -120,7 +127,7 @@
 		</div>
 
 		<!-- Image Carousel -->
-		<div id="carouselIndex" class="carousel slide" data-interval="5000" data-ride="carousel" style="opacity: 0;">
+		<div id="carouselIndex" class="carousel slide" data-ride="carousel" data-interval="7500" style="opacity: 0;">
 		  <ol class="carousel-indicators">
 		    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
 		    <li data-target="#carouselIndicators" data-slide-to="1"></li>
@@ -129,12 +136,21 @@
 		  <div class="carousel-inner" role="listbox">
 		    <div class="carousel-item active">
 		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_1.jpg" alt="First slide">
+  				<div class="carousel-caption d-none d-md-block" style="margin-top: 50px;">
+  					<h2 style="">Learn more <a href="aboutme.php"><strong>about me</strong></a> or visit my <a href="blog.php"><strong>blog</strong></a></h2>
+  				</div>
 		    </div>
 		    <div class="carousel-item">
 		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_2.jpg" alt="Second slide">
+		     	<div class="carousel-caption d-none d-md-block">
+  					<h2 style="">Browse through the <a href="gallery.php"><strong>gallery</strong></a></h2>
+  				</div>
 		    </div>
 		    <div class="carousel-item">
 		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_3.jpg" alt="Third slide">
+		     	<div class="carousel-caption d-none d-md-block">
+  					<h2 style="">Business inquiry? <a href="letstalk.php"><strong>Let's talk.</strong></a></h2>
+  				</div>
 		    </div>
 		  </div>
 		  <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
