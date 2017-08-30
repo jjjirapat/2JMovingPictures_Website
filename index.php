@@ -69,16 +69,16 @@
 			}
 
 			.welcomeTitle {
-				position: relative;
 				opacity: 0;
+				position: relative;
 			}
 
 			#carouselIndex {
 			}
 
 			.carousel-inner img {
-			    opacity: 0.7;
 			    margin-top: -100px;
+			    opacity: 0.7;
 			}
 
 			.carousel,.item,.active {
@@ -90,18 +90,17 @@
 			}
 
 			.carousel-caption {
+				-webkit-backface-visibility: hidden;
 				opacity: 0.75;
 				text-shadow:
 					-1px -1px 0 #000,  
 					1px -1px 0 #000,
 					-1px 1px 0 #000,
 					1px 1px 0 #000;
-					-webkit-backface-visibility: hidden;
-					z-index: 10;
+				z-index: 10;
 			}
 
 			.carousel-caption a:hover {
-
     			text-decoration: none;
 			}
 
@@ -132,7 +131,7 @@
 		<!-- Welcome animation -->
 		<div id="welcomeContainer" class="container-fluid" style="">
 			<div id="welcomeText" style="text-align: center; position: absolute; 
-				z-index: 2; left: 40%; top: 30%;">
+				z-index: 2; left: 38%; top: 30%;">
 				<h1 class="welcomeTitle" id="welcomeTitle1">Hello!</h1>
 				<h1 class="welcomeTitle" id="welcomeTitle2">I'm glad you could make it.</h1>
 			</div>
@@ -140,39 +139,39 @@
 
 		<!-- Image Carousel -->
 		<div id="carouselIndex" class="carousel slide" data-ride="carousel" data-interval="7500" style="opacity: 0;">
-		  <ol class="carousel-indicators">
-		    <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
-		    <li data-target="#carouselIndicators" data-slide-to="1"></li>
-		    <li data-target="#carouselIndicators" data-slide-to="2"></li>
-		  </ol>
-		  <div class="carousel-inner" role="listbox">
-		    <div class="carousel-item active">
-		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_1.jpg" alt="First slide">
-  				<div class="carousel-caption d-none d-md-block">
-  					<h2 style="">Learn more <a href="aboutme.php"><strong>about me</strong></a> or visit my <a href="blog.php"><strong>blog</strong></a></h2>
-  				</div>
-		    </div>
-		    <div class="carousel-item">
-		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_2.jpg" alt="Second slide">
-		     	<div class="carousel-caption d-none d-md-block">
-  					<h2 style="">Browse through the <a href="gallery.php"><strong>gallery</strong></a></h2>
-  				</div>
-		    </div>
-		    <div class="carousel-item">
-		      <img class="d-block img-fluid" src="images/gallery-photos/Carousel_3.jpg" alt="Third slide">
-		     	<div class="carousel-caption d-none d-md-block">
-  					<h2 style="">Got a question? <a href="letstalk.php"><strong>Let's talk.</strong></a></h2>
-  				</div>
-		    </div>
-		  </div>
-		  <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+		    <ol class="carousel-indicators">
+		        <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+		        <li data-target="#carouselIndicators" data-slide-to="1"></li>
+		        <li data-target="#carouselIndicators" data-slide-to="2"></li>
+		    </ol>
+		    <div class="carousel-inner" role="listbox">
+		        <div class="carousel-item active">
+		            <img class="d-block img-fluid" src="images/gallery-photos/Carousel_1.jpg" alt="First slide">
+		            <div class="carousel-caption d-none d-md-block">
+		                <h2 style="">Learn more <a href="aboutme.php"><strong>about me</strong></a> or visit my <a href="blog.php"><strong>blog</strong></a></h2>
+		            </div>
+		        </div>
+		        <div class="carousel-item">
+		            <img class="d-block img-fluid" src="images/gallery-photos/Carousel_2.jpg" alt="Second slide">
+		            <div class="carousel-caption d-none d-md-block">
+		                <h2 style="">Browse through the <a href="gallery.php"><strong>gallery</strong></a></h2>
+		            </div>
+		        </div>
+		        <div class="carousel-item">
+		            <img class="d-block img-fluid" src="images/gallery-photos/Carousel_3.jpg" alt="Third slide">
+		            <div class="carousel-caption d-none d-md-block">
+		                <h2 style="">Got a question? <a href="letstalk.php"><strong>Let's talk.</strong></a></h2>
+		            </div>
+		        </div>
+			</div>
+		    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
 		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 		    <span class="sr-only">Previous</span>
-		  </a>
-		  <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next" style="color: #707070;">
+		    </a>
+		    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next" style="color: #707070;">
 		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
 		    <span class="sr-only">Next</span>
-		  </a>
+		    </a>
 		</div>
 	</body>
 </html>
